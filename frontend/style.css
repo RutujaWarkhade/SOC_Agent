@@ -1,0 +1,23 @@
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#8b949e;--acc:#2f81f7;
+--Critical:#f85149;--High:#f0883e;--Medium:#d29922;--Low:#3fb950}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:14px system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px}
+h1{font-size:20px;margin:0}h2{margin:0 0 12px;font-size:15px}
+button,.btn{background:var(--acc);color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px}
+button:hover,.btn:hover{opacity:.85}button.danger{background:var(--Critical)}button:disabled{opacity:.5}
+.actions{display:flex;gap:8px;align-items:center}
+.pill{background:var(--card);border:1px solid var(--line);padding:4px 10px;border-radius:99px;font-size:12px;color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;padding:16px 24px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px}
+.stat b{font-size:24px;display:block}.stat span{color:var(--mut);font-size:12px}
+main{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;padding:0 24px 16px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;overflow:auto;max-height:70vh}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:500}tbody tr{cursor:pointer}tbody tr:hover,tr.sel{background:#1f2630}
+.sev{padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600;color:#000}
+.sev.Critical{background:var(--Critical)}.sev.High{background:var(--High)}.sev.Medium{background:var(--Medium)}.sev.Low{background:var(--Low)}
+.muted{color:var(--mut)}pre{background:var(--bg);padding:10px;border-radius:6px;white-space:pre-wrap;font-size:12px;border:1px solid var(--line)}
+.step{border-left:3px solid var(--acc);padding-left:10px;margin:8px 0;font-size:12px}
+footer{padding:12px 24px;color:var(--mut);border-top:1px solid var(--line)}

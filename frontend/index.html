@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOC Agent</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🛡️ AI SOC Agent</h1>
+  <div class="actions">
+    <span id="mode" class="pill"></span>
+    <button id="gen">Generate Sample Logs</button>
+    <label class="btn">Upload Logs (.json)<input type="file" id="file" accept=".json" hidden></label>
+  </div>
+</header>
+<section class="stats" id="stats"></section>
+<main>
+  <div class="panel"><h2>Alerts</h2>
+    <table><thead><tr><th>ID</th><th>Severity</th><th>Rule</th><th>Source IP</th><th>Status</th></tr></thead>
+    <tbody id="alerts"></tbody></table>
+  </div>
+  <div class="panel" id="detail"><h2>Investigation</h2><p class="muted">Select an alert.</p></div>
+</main>
+<footer>Blocklist: <span id="blocklist">none</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
